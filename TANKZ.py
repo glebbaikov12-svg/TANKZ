@@ -66,10 +66,10 @@ while running:
     for b in enemy_bullets: 
         pygame.draw.circle(screen, (255, 0, 0), (int(b[0]), int(b[1])), 4)
     font = pygame.font.Font(None, 24)
-    text = "Score: " + str(score) + "  Lives: " + str(lives)
+    text = "Очки: " + str(score) + "  жизни: " + str(lives)
     screen.blit(font.render(text, True, (255,255,255)), (10, 10))
     if lives <= 0:
-        game_over_text = "GAME OVER - Press R"
+        game_over_text = "ИГРА ОКОНЧЕНА - Жми R"  
         screen.blit(font.render(game_over_text, True, (255,0,0)), (200, 300))
     pygame.display.flip()
     clock.tick(60)
